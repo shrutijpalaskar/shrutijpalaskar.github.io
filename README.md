@@ -1,25 +1,108 @@
-# Minimal Mistakes
+# Personal Academic Website
 
-**[Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes)** is a two column responsive Jekyll theme perfect for powering your GitHub hosted blog.
+A clean, modern personal website inspired by minimalist academic portfolios.
 
-**Jekyll 3 Update:** A version of Minimal Mistakes compatible with Jekyll 3 can be found in the [`jekyll3` branch](https://github.com/mmistakes/minimal-mistakes/tree/jekyll3). GitHub Pages is [locked at version 2.4](https://pages.github.com/versions/) so some keep that in mind if you're trying to use 3.0 features that aren't supported there yet.
+## Features
 
-## Minimal Mistakes is all about:
+- 🎨 Clean, minimalist design
+- 📱 Fully responsive (mobile, tablet, desktop)
+- ⚡ Fast loading - pure HTML/CSS/JS, no frameworks
+- 🎯 Easy to customize
+- 🚀 Ready for GitHub Pages deployment
 
-* Responsive templates. Looking good on mobile, tablet, and desktop.
-* Gracefully degrading in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.
-* Minimal embellishments -- content first.
-* Optional large feature images for posts and pages.
-* Simple and clear permalink structure.
-* [Custom 404 page](http://mmistakes.github.io/minimal-mistakes/404.html) to get you started.
-* Support for Disqus Comments
+## Quick Start
 
-![screenshot of Minimal Mistakes theme](http://mmistakes.github.io/minimal-mistakes/images/mm-theme-post-600.jpg)
+### Local Testing
 
-See a [live version of Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes/) hosted on GitHub.
+1. Open `index.html` in your browser, or
+2. Use a local server:
+   ```bash
+   # Python 3
+   python3 -m http.server 8000
+   
+   # Python 2
+   python -m SimpleHTTPServer 8000
+   
+   # Node.js (if you have npx)
+   npx serve
+   ```
+3. Visit `http://localhost:8000` in your browser
 
-## Getting Started
+### Customization
 
-Minimal Mistakes takes advantage of Sass and data files to make customizing easier. These features require Jekyll 2.x and will not work with older versions of Jekyll.
+1. **Profile Image**: Replace `profile.jpg` with your photo
+2. **Personal Info**: Edit `index.html`:
+   - Update name, title, affiliation
+   - Update email and social links
+   - Add your bio in the About section
+   - Add your news items
+   - Add your publications
 
-To learn how to install and use this theme check out the [Setup Guide](http://mmistakes.github.io/minimal-mistakes/theme-setup/) for more information.
+3. **Styling**: Modify `styles.css` to change:
+   - Colors (see CSS variables at top)
+   - Fonts
+   - Layout spacing
+
+4. **CV**: Add your `cv.pdf` file to the directory
+
+## Deployment to GitHub Pages
+
+### Option 1: Replace Your Existing Site
+
+1. Copy all files from `new-website/` to your `shrutijpalaskar.github.io` repository
+2. Commit and push:
+   ```bash
+   cd shrutijpalaskar.github.io
+   git add .
+   git commit -m "Update website with new design"
+   git push origin main
+   ```
+3. Your site will be live at `https://shrutijpalaskar.github.io`
+
+### Option 2: Test in a New Repository First
+
+1. Create a new repository on GitHub (e.g., `new-website-test`)
+2. Push these files to that repository
+3. Enable GitHub Pages in repository settings
+4. Test at `https://yourusername.github.io/new-website-test`
+5. Once satisfied, move to your main repository
+
+## File Structure
+
+```
+new-website/
+├── index.html          # Main HTML file
+├── styles.css          # All styling
+├── script.js           # Interactive features
+├── profile.jpg         # Your profile photo
+├── cv.pdf             # Your CV (add this)
+└── README.md          # This file
+```
+
+## Interactive Features
+
+- Click profile image for a fun animation
+- Smooth scrolling
+- Fade-in animations on scroll
+- Email copy-to-clipboard
+- Responsive navigation
+- Press 'h' key to scroll to top
+
+## Browser Support
+
+- Chrome/Edge (latest)
+- Firefox (latest)
+- Safari (latest)
+- Mobile browsers
+
+## Tips
+
+- Keep content concise and scannable
+- Use high-quality profile photo (square, at least 400x400px)
+- Update news section regularly
+- Link to paper PDFs, code repositories, and project pages
+- Keep CV updated
+
+## License
+
+Free to use and modify for personal use.
