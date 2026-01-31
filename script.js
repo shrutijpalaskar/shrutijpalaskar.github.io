@@ -40,42 +40,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Smooth scroll for anchor links
+    // Instant scroll for anchor links (smooth scrolling disabled to prevent delayed rendering)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
                 target.scrollIntoView({
-                    behavior: 'smooth',
+                    behavior: 'auto',
                     block: 'start'
                 });
             }
         });
     });
 
-    // Add fade-in animation on scroll
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
-
-    // Observe all sections
-    document.querySelectorAll('.section').forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(section);
-    });
+    // Fade-in animation disabled to prevent delayed text rendering
+    // Sections now appear instantly when scrolling
 
     // Add copy email functionality
     const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
@@ -132,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (e.key === 'h' && !e.ctrlKey && !e.metaKey) {
             const activeElement = document.activeElement;
             if (activeElement.tagName !== 'INPUT' && activeElement.tagName !== 'TEXTAREA') {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                window.scrollTo({ top: 0, behavior: 'auto' });
             }
         }
     });
